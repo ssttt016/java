@@ -3,6 +3,7 @@ package variable;
 public class P54 {
 
 	public static void main(String[] args) {
+		int d = 10;
 //		변수의 선언 방식
 		//		int Aa = 10; //가능하지만 하지는 말자
 //		int 1a = 10; //숫자로 먼저 시작하면 안 됨
