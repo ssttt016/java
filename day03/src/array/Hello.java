@@ -6,6 +6,7 @@ public class Hello {
 		int a = 100;
 		
 		int bb = 1000;
+		int aa = 100;
 
 	}
 
