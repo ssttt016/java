@@ -11,6 +11,8 @@ public class P99 {
 		int bbb = 100; //깃
 		
 		int cc = 20;
+		
+		int cc = 100;
 		for(int i=2;i<10;i++) {
 			System.out.printf("%d 단 \n",i);
 			for(int j=1;j<10;j++) {
