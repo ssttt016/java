@@ -32,9 +32,9 @@ public class App {
 	double sum = 0.0;
 	double avg = 0.0;
 	int cnt = 0;
-	for(Account c : accarr) {
-		if(c.getGrade().equals("VIP")) {
-			sum += c.getBalance();
+	for(Account b : accarr) {
+		if(b.getGrade().equals("VIP")) {
+			sum += b.getBalance();
 			cnt++;
 		}avg = sum / (cnt*1.0);
 	}
