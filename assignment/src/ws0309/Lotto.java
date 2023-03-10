@@ -6,16 +6,14 @@ import java.util.Random;
 import java.util.Scanner;
 
 public class Lotto {
-//	private int winningNum;
-//	private double prizeMoney;
-
-	HashSet<Integer> num = new HashSet<Integer>();
+	private HashSet<Integer> winningNum;
+	
 	ArrayList<Integer> myNum = new ArrayList<Integer>();
 	Scanner sc = new Scanner(System.in);
 	Random r = new Random();
 
 	public Lotto() {
-		num = new HashSet<Integer>();
+		winningNum = new HashSet<Integer>();
 	}
 
 	public ArrayList<Integer> makeNum() throws Exception {
@@ -33,15 +31,15 @@ public class Lotto {
 	}
 
 	public void makeWinningNumberMoney() {
-		while (num.size() < 3) {
-			num.add(r.nextInt(24) + 1);
+		while (winningNum.size() < 3) {
+			winningNum.add(r.nextInt(25) + 1);
 		}
 		System.out.printf("행운의 숫자는 : ");
-		System.out.println(num);
+		System.out.println(winningNum);
 	}
 
 	public double prizeMoney() {
-		double money = r.nextInt(1999999999) + 1;
+		double money = r.nextInt(2000000000) + 1;
 
 		double grade1 = money * 0.7;
 		double grade2 = money * 0.2;
@@ -53,9 +51,9 @@ public class Lotto {
 	int cnt = 0;
 
 	public void checkRanking() {
-		for (int my : myNum) {
-			for (int goal : num) {
-				if (my == goal) {
+		for (int mine : myNum) {
+			for (int goal : winningNum) {
+				if (mine == goal) {
 					cnt++;
 				}
 			}
