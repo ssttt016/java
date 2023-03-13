@@ -5,6 +5,7 @@ import java.util.Collection;
 import java.util.HashMap;
 import java.util.List;
 
+import com.kbstar.dto.AccountDTO;
 import com.kbstar.dto.TransactionDTO;
 import com.kbstar.frame.DAO;
 
@@ -60,8 +61,16 @@ public class TransactionDAO implements DAO<String, TransactionDTO>{
 	// 해당 계좌의 거래 내역을 조회한다.
 	@Override
 	public List<TransactionDTO> search(Object obj) throws Exception {
+		List<TransactionDTO> list = new ArrayList<TransactionDTO>();
+		Collection<TransactionDTO> col = db.values();
 		
-		return null;
+		for (TransactionDTO acc:col) {
+			if(acc.getAccNo().equals(obj)) {			
+				list.add(acc);
+			}
+		}
+		
+		return list;
 	}
 
 }
