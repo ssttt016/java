@@ -29,7 +29,7 @@ public class SelectTest {
 		// SQL 전송
 		try (Connection con = DriverManager.getConnection(url, id, pwd);
 				PreparedStatement pstmt = con.prepareStatement(selectsql);){
-			pstmt.setString(1, "id01");
+			pstmt.setString(1, "id03");
 			try(ResultSet rset = pstmt.executeQuery()){
 				rset.next();  //중요
 				String db_id = rset.getString("id");
