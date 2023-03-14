@@ -14,4 +14,6 @@ public class Sql {
 	public static String itemUpdateSql = "UPDATE item SET name = ?, price = ?, rate = ? WHERE id = ?";
 	public static String itemSelectSql = "SELECT * FROM item WHERE id = ?";
 	public static String itemSelectAllSql = "SELECT * FROM item";
+	
+	
 }
