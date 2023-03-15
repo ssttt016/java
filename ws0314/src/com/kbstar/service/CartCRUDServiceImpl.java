@@ -7,6 +7,7 @@ import com.kbstar.dao.CartDaoImpl;
 import com.kbstar.dto.Cart;
 import com.kbstar.frame.CRUDService;
 import com.kbstar.frame.DAO;
+import com.kbstar.frame.MakeItemNumber;
 
 public class CartCRUDServiceImpl implements CRUDService<String, Cart> {
 
@@ -19,6 +20,8 @@ public class CartCRUDServiceImpl implements CRUDService<String, Cart> {
 	@Override
 	public void register(Cart v) throws Exception {
 		try {
+			String id = MakeItemNumber.makeItemNum();
+			v.setId(id);
 			dao.insert(v);
 		} catch (Exception e) {
 			if (e instanceof SQLRecoverableException) {
